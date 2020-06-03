@@ -32,7 +32,7 @@ namespace DOT.NET.Models
         public StanZamowienia StanZamowienia { get; set; }
         public decimal WartoscZamowienia { get; set; }
 
-        List<PozycjaZmowienia> PozycjaZmowienia { get; set; }
+        List<PozycjaZamowienia> PozycjaZamowienia { get; set; }
 
 
 

@@ -1,6 +1,6 @@
 ﻿namespace DOT.NET.Models
 {
-    internal class PozycjaZmowienia
+    public class PozycjaZamowienia
     {
         public int PozycjaZamowieniaId { get; set; }
         public int ZamowienieId { get; set; }

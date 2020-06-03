@@ -101,12 +101,13 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="DAL\KursyContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Kategoria.cs" />
     <Compile Include="Models\Kurs.cs" />
-    <Compile Include="Models\PozycjaZmowienia.cs" />
+    <Compile Include="Models\PozycjaZamowienia.cs" />
     <Compile Include="Models\Zamowienia.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
