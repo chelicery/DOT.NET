@@ -14,6 +14,10 @@ namespace DOT.NET.DAL
         {
 
         }
+        static KursyContext()
+        {
+            Database.SetInitializer<KursyContext>(new KursyInitializer());
+        }
         public DbSet<Kurs> Kursy { get; set; }
         public DbSet<Kategoria> Kategorie { get; set; }
         public DbSet<Zamowienie> Zamowienia { get; set; }
@@ -23,7 +27,8 @@ namespace DOT.NET.DAL
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-
+            modelBuilder.Properties<DateTime>()
+            .Configure(c => c.HasColumnType("datetime2"));
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
         }
     }

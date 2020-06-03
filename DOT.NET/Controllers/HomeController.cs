@@ -14,10 +14,8 @@ namespace DOT.NET.Controllers
         // GET: Home
         public ActionResult Index()
         {
-            Kategoria kategoria = new Kategoria { NazwaKategorii = "asp.net mvc", NazwaPlikuIkony = "aspNetMvc.png", OpisKategorii = "opis kategorii" };
-            db.Kategorie.Add(kategoria);
-            db.SaveChanges();
-            
+
+            List<Kategoria> listaKategori = db.Kategorie.ToList();
             return View();
         }
     }
