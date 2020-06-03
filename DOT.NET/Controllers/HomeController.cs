@@ -10,7 +10,7 @@ namespace DOT.NET.Controllers
 {
     public class HomeController : Controller
     {
-        private KursyContext db = new KursyContext();
+        private PrzedmiotyContext db = new PrzedmiotyContext();
         // GET: Home
         public ActionResult Index()
         {

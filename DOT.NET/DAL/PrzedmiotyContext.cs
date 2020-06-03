@@ -8,17 +8,17 @@ using System.Web;
 
 namespace DOT.NET.DAL
 {
-    public class KursyContext : DbContext
+    public class PrzedmiotyContext : DbContext
     {
-        public KursyContext() : base("KursyContext")
+        public PrzedmiotyContext() : base("KursyContext")
         {
 
         }
-        static KursyContext()
+        static PrzedmiotyContext()
         {
-            Database.SetInitializer<KursyContext>(new KursyInitializer());
+            Database.SetInitializer<PrzedmiotyContext>(new PrzedmiotyInitializer());
         }
-        public DbSet<Kurs> Kursy { get; set; }
+        public DbSet<Przedmiot> Przedmioty { get; set; }
         public DbSet<Kategoria> Kategorie { get; set; }
         public DbSet<Zamowienie> Zamowienia { get; set; }
         public DbSet<PozycjaZamowienia> PozycjeZamowienia  { get; set; }

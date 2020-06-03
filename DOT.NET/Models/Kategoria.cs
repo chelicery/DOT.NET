@@ -12,6 +12,7 @@ namespace DOT.NET.Models
         [Required(ErrorMessage = "Wprowadz opis kategorii")]
         public string OpisKategorii { get; set; }
         public string NazwaPlikuIkony { get; set; }
-        public virtual ICollection<Kurs> Kursy { get; set; }
+        public virtual ICollection<Przedmiot> Przedmioty
+        { get; set; }
     }
 }
