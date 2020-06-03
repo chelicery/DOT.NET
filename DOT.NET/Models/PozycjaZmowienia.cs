@@ -10,5 +10,6 @@
     
         public virtual Kurs kurs { get; set; }
         public virtual Zamowienie zamowienie { get; set; }
+
     }
 }
