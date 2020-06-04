@@ -226,6 +226,8 @@
     <Content Include="Views\Home\Regulamin.cshtml" />
     <Content Include="Views\Przedmioty\Lista.cshtml" />
     <Content Include="Views\Koszyk\DodajDoKoszyka.cshtml" />
+    <Content Include="Views\Przedmioty\_KategorieMenu.cshtml" />
+    <Content Include="Views\Przedmioty\_PrzedmiotyList.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

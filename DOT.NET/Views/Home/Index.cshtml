@@ -26,16 +26,11 @@
         <a href=@Url.Action("DodajDoKoszyka", "Koszyk", new { id = nowosc.PrzedmiotId })><img src="~/Content/Images/koszyk.png" width="20" height="20" /> </a> <a href=@Url.Action("Szczegoly", "Przemioty", new {id = nowosc.PrzedmiotId})><img src="~/Content/Images/lupka.png" width="20" height="20" style="padding-left:5px;" /></a>
     </div>
     
-      }
-
-   
+      }  
 
 </section>
 
-
-
 <section>
-
     <h1 class="display-1">Bestsellery:</h1>
     @foreach (var bestseller in Model.Bestsellery)
     {
@@ -46,8 +41,5 @@
             <a href=@Url.Action("DodajDoKoszyka", "Koszyk", new { id = bestseller.PrzedmiotId })><img src="~/Content/Images/koszyk.png" width="20" height="20" /> </a> <a href=@Url.Action("Szczegoly", "Przemioty", new {id = bestseller.PrzedmiotId})><img src="~/Content/Images/lupka.png" width="20" height="20" style="padding-left:5px;" /></a>
         </div>
 
-    }
-
-
-
+    }       
 </section>

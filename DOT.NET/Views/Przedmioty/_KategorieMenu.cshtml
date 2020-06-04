@@ -1,0 +1,30 @@
+﻿@model IEnumerable<DOT.NET.Models.Kategoria>
+@{
+    ViewBag.Title = "_KategorieMenu";
+    
+}
+
+<h2>_KategorieMenu</h2>
+
+<div>
+    <div>
+        <ul>
+            @foreach (var kategoria in Model)
+            {
+
+                <li>
+                    <a href="@Url.Action("Lista", "Przedmioty", new { nazwaKategori = kategoria.NazwaKategorii.ToLower() })">@kategoria.NazwaKategorii</a>
+                </li>
+            }
+
+        </ul>
+    </div>
+
+
+    <div style="float:left;">
+
+
+    </div>
+</div>
+
+

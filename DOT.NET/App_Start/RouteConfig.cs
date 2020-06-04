@@ -12,11 +12,17 @@ namespace DOT.NET
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+
+            routes.MapRoute(
+            name: "PrzedmiotyLista",
+            url: "Kategoria/{nazwaKategori}.html",
+            defaults: new { controller = "Przedmioty", action = "Lista" });
             //modyfikacja routingu restowego
             routes.MapRoute(
                 name: "StronyStatyczne",
                 url: "strony/{nazwa}.html",
                 defaults: new { controller = "Home", action = "StronyStatyczne" });
+
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",

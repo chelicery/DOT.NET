@@ -31,7 +31,7 @@ namespace DOT.NET.DAL
             {
                 new Przedmiot() {  Producent = "Huong San", Nazwa= "Opona samochodowa", KategoriaId=2, Cena=500, Bestseller=true, NazwaPlikuObrazka="opona.png" },
                 new Przedmiot() { Producent = "Biedronka", Nazwa= "Obraz na płótnie malowany", KategoriaId=4, Cena=12000, Bestseller=true, NazwaPlikuObrazka="obraz.png" },
-                new Przedmiot() {Producent = "Hp", Nazwa= "Drukarka", KategoriaId=2, Cena=21, Bestseller=true, NazwaPlikuObrazka="drukarka.png" },
+                new Przedmiot() {Producent = "Hp", Nazwa= "Drukarka", KategoriaId=5, Cena=21, Bestseller=true, NazwaPlikuObrazka="drukarka.png" },
                 new Przedmiot() { Producent = "Adidas", Nazwa = "Piłka okrągła", KategoriaId = 6, Cena = 120, Bestseller = false, NazwaPlikuObrazka = "pilka.png" },
                 new Przedmiot() { Producent = "Mymusic", Nazwa = "Płyta muzyczna", KategoriaId = 3, Cena = 30, Bestseller = false, NazwaPlikuObrazka = "plyta.png" },
                 new Przedmiot() { Producent = "Biotanic", Nazwa = "taczka bez koła", KategoriaId = 1, Cena = 300, Bestseller = true, NazwaPlikuObrazka = "taczka.png" }
