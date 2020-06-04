@@ -18,5 +18,10 @@ namespace DOT.NET.Controllers
             List<Kategoria> listaKategori = db.Kategorie.ToList();
             return View();
         }
+
+        public ActionResult StronyStatyczne(string nazwa)
+        {
+            return View(nazwa);
+        }
     }
 }

@@ -10,7 +10,7 @@ namespace DOT.NET.DAL
 {
     public class PrzedmiotyContext : DbContext
     {
-        public PrzedmiotyContext() : base("KursyContext")
+        public PrzedmiotyContext() : base("AllegroDatabase")
         {
 
         }

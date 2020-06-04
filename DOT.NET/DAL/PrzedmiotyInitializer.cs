@@ -4,18 +4,15 @@ using System.Linq;
 using System.Web;
 using System.Data.Entity;
 using DOT.NET.Models;
+using DOT.NET.Migrations;
+using System.Data.Entity.Migrations;
 
 namespace DOT.NET.DAL
 {
-    public class PrzedmiotyInitializer : DropCreateDatabaseAlways<PrzedmiotyContext>
+    public class PrzedmiotyInitializer : MigrateDatabaseToLatestVersion<PrzedmiotyContext, Configuration>
     {
-        protected override void Seed(PrzedmiotyContext context)
-        {
-            SeedPrzedmiotyData(context);
-            base.Seed(context);
-        }
-
-        private void SeedPrzedmiotyData(PrzedmiotyContext context)
+      
+        public static void SeedPrzedmiotyData(PrzedmiotyContext context)
         {
             var kategorie = new List<Kategoria>
             {
@@ -27,7 +24,7 @@ namespace DOT.NET.DAL
                 new Kategoria() { KategoriaId = 6, NazwaKategorii = "Hobby", NazwaPlikuIkony = "xml.png", OpisKategorii = "opis xml" }
 
              };
-            kategorie.ForEach(k => context.Kategorie.Add(k));
+            kategorie.ForEach(k => context.Kategorie.AddOrUpdate(k));
             context.SaveChanges();
 
             var przedmioty = new List<Przedmiot>
@@ -37,7 +34,7 @@ namespace DOT.NET.DAL
                 new Przedmiot() {Producent = "Kamila", Nazwa= "drukarka", KategoriaId=2, Cena=21, Bestseller=true, NazwaPlikuObrazka="asp.png" },
                 new Przedmiot() { Producent = "Karolina", Nazwa = "czekotubka", KategoriaId = 2, Cena = 30, Bestseller = true, NazwaPlikuObrazka = "asp.png" }
             };
-            przedmioty.ForEach(k => context.Przedmioty.Add(k));
+            przedmioty.ForEach(k => context.Przedmioty.AddOrUpdate(k));
             context.SaveChanges();
 
 

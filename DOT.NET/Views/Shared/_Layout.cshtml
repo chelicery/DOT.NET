@@ -9,28 +9,30 @@
     <script src="~/Scripts/modernizr-2.6.2.js"></script>
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                <a class="navbar-brand" href="#">Sklep internetowy</a>
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                </ul>
-            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="link">Koszyk</a></li>
+                    </ul>
         </div>
-    </div>
-
+    </nav>
     <div class="container body-content">
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+
+            <div style="width:50%; margin:0 auto; padding-top: 4px;">
+                <button type="button" class="btn btn-default">O nas</button>
+                <button type="button" class="btn btn-default">Regulamin</button>
+                <button type="button" class="btn btn-default">Dostawa</button>
+                <button type="button" class="btn btn-default">Kontakt</button>
+             </div>
+            <br />
+            <p>&copy; @DateTime.Now.Year DOT </p>
+
         </footer>
     </div>
 
