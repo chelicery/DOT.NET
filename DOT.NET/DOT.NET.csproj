@@ -111,7 +111,8 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\Images\logo.png" />
+    <Content Include="Content\Images\koszyk.png" />
+    <Content Include="Content\Images\lupka.png" />
     <Content Include="Content\Kategorie\dom.png" />
     <Content Include="Content\Kategorie\hobby.png" />
     <Content Include="Content\Kategorie\kultura.png" />
@@ -119,11 +120,12 @@
     <Content Include="Content\Kategorie\ogrod.png" />
     <Content Include="Content\Kategorie\sztuka.png" />
     <Content Include="Content\Prototype.css" />
-    <Content Include="Content\Przedmoty\drukarka.png" />
-    <Content Include="Content\Przedmoty\obraz.png" />
-    <Content Include="Content\Przedmoty\opona.png" />
-    <Content Include="Content\Przedmoty\plyta.png" />
-    <Content Include="Content\Przedmoty\taczka.png" />
+    <Content Include="Content\Przedmioty\drukarka.png" />
+    <Content Include="Content\Przedmioty\obraz.png" />
+    <Content Include="Content\Przedmioty\opona.png" />
+    <Content Include="Content\Przedmioty\pilka.png" />
+    <Content Include="Content\Przedmioty\plyta.png" />
+    <Content Include="Content\Przedmioty\taczka.png" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\themes\base\accordion.css" />
     <Content Include="Content\themes\base\all.css" />
@@ -179,6 +181,7 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\KoszykController.cs" />
     <Compile Include="Controllers\PrzedmiotyController.cs" />
     <Compile Include="DAL\PrzedmiotyContext.cs" />
     <Compile Include="DAL\PrzedmiotyInitializer.cs" />
@@ -222,6 +225,7 @@
     <Content Include="Views\Home\Dostawa.cshtml" />
     <Content Include="Views\Home\Regulamin.cshtml" />
     <Content Include="Views\Przedmioty\Lista.cshtml" />
+    <Content Include="Views\Koszyk\DodajDoKoszyka.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

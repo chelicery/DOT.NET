@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+//DOT_HELPERS
 
 namespace DOT.NET.OwnHelpers
 {
@@ -19,8 +20,8 @@ namespace DOT.NET.OwnHelpers
 
         public static string ObrazekSciezka(this UrlHelper helper, string nazwaObrazka)
         {
-            var ObrazkiFolder = AppConfig.ObrazkiFolderWzgledny;
-            var sciezka = Path.Combine(ObrazkiFolder, nazwaObrazka);
+            var obrazkiFolder = AppConfig.ObrazkiFolderWzgledny;
+            var sciezka = Path.Combine(obrazkiFolder, nazwaObrazka);
             var sciezkaBezwzgledna = helper.Content(sciezka);
             return sciezkaBezwzgledna;
         }

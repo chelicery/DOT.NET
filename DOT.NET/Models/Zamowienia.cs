@@ -9,6 +9,7 @@ namespace DOT.NET.Models
     public class Zamowienie
     {
         public int ZamowienieId { get; set; }
+        // DOT_WALIDATORY
         [Required(ErrorMessage = "Wprowadź swoje imie")]
         [StringLength(50)]
         public string Imie { get; set; }

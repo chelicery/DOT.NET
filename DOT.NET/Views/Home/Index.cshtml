@@ -6,7 +6,7 @@
 <div class="btn-group btn-group-justified">
     @foreach (var kategoria in Model.Kategorie)
     {
-        <!-- own helper used-->
+        <!-- DOT_HELPER USED -->
         <img src=@Url.IkonyKategoriSciezka(kategoria.NazwaPlikuIkony)>
         <a href="@Url.Action("Lista", "Przedmioty", new { nazwaKategori = kategoria.NazwaKategorii.ToLower() })">@kategoria.NazwaKategorii</a>
      }
@@ -16,16 +16,38 @@
 
 <section>
 
-    <ul>
-        @foreach (var nowosc in Model.Nowosci)
-        {
-        <li>
-            <h1>@nowosc.Nazwa - @nowosc.Producent</h1>
-            <img src=@Url.ObrazekSciezka(nowosc.NazwaPlikuObrazka)/>
+    <h1 class="display-1">Nowości:</h1>
+    @foreach (var nowosc in Model.Nowosci)
+    {
 
-        </li>
-        }
+    <div class="text-center" style="display:inline-block; padding-left:20px;">
+        <h5>@nowosc.Nazwa <br />--@nowosc.Producent--</h5>
+        <img src=@Url.ObrazekSciezka(nowosc.NazwaPlikuObrazka) class="rounded" alt="" width="100" height="100"><br />
+        <a href=@Url.Action("DodajDoKoszyka", "Koszyk", new { id = nowosc.PrzedmiotId })><img src="~/Content/Images/koszyk.png" width="20" height="20" /> </a> <a href=@Url.Action("Szczegoly", "Przemioty", new {id = nowosc.PrzedmiotId})><img src="~/Content/Images/lupka.png" width="20" height="20" style="padding-left:5px;" /></a>
+    </div>
+    
+      }
 
-    </ul>
+   
+
+</section>
+
+
+
+<section>
+
+    <h1 class="display-1">Bestsellery:</h1>
+    @foreach (var bestseller in Model.Bestsellery)
+    {
+
+        <div class="text-center" style="display:inline-block; padding-left:20px;">
+            <h5>@bestseller.Nazwa <br />--@bestseller.Producent--</h5>
+            <img src=@Url.ObrazekSciezka(bestseller.NazwaPlikuObrazka) class="rounded" alt="" width="100" height="100"><br />
+            <a href=@Url.Action("DodajDoKoszyka", "Koszyk", new { id = bestseller.PrzedmiotId })><img src="~/Content/Images/koszyk.png" width="20" height="20" /> </a> <a href=@Url.Action("Szczegoly", "Przemioty", new {id = bestseller.PrzedmiotId})><img src="~/Content/Images/lupka.png" width="20" height="20" style="padding-left:5px;" /></a>
+        </div>
+
+    }
+
+
 
 </section>

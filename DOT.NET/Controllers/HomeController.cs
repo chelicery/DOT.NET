@@ -15,7 +15,7 @@ namespace DOT.NET.Controllers
         // GET: Home
         public ActionResult Index()
         {
-
+            //DOT_LINQ
             var kategorie = db.Kategorie.ToList();
             var nowosci = db.Przedmioty.Where(a => !a.Ukryty).OrderByDescending(a => a.DataDodania).Take(3).ToList();
             var bestseller = db.Przedmioty.Where(a => !a.Ukryty && a.Bestseller).OrderBy(a => Guid.NewGuid()).Take(3).ToList();

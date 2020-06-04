@@ -6,18 +6,14 @@ using System.Web.Mvc;
 
 namespace DOT.NET.Controllers
 {
-    public class PrzedmiotyController : Controller
+    public class KoszykController : Controller
     {
-        // GET: Przedmioty
+        // GET: Koszyk
         public ActionResult Index()
         {
             return View();
         }
-        public ActionResult Lista(string nazwaKategorii)
-        {
-            return View();
-        }
-        public ActionResult Szczegoly(string id)
+        public ActionResult DodajDoKoszyka(string id)
         {
             return View();
         }
