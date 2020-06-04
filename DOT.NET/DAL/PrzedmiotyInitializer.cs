@@ -16,12 +16,12 @@ namespace DOT.NET.DAL
         {
             var kategorie = new List<Kategoria>
             {
-                new Kategoria() { KategoriaId = 1, NazwaKategorii="Ogród", NazwaPlikuIkony="asp.png", OpisKategorii="opis asp dot net"},
-                new Kategoria() { KategoriaId = 2, NazwaKategorii = "Motoryzacja", NazwaPlikuIkony = "java.png", OpisKategorii = "opis java" },
-                new Kategoria() { KategoriaId = 3, NazwaKategorii = "Kultura", NazwaPlikuIkony = "php.png", OpisKategorii = "opis php" },
-                new Kategoria() { KategoriaId = 4, NazwaKategorii = "Sztuka", NazwaPlikuIkony = "html.png", OpisKategorii = "opis html" },
-                new Kategoria() { KategoriaId = 5, NazwaKategorii = "Dom", NazwaPlikuIkony = "css.png", OpisKategorii = "opis css" },
-                new Kategoria() { KategoriaId = 6, NazwaKategorii = "Hobby", NazwaPlikuIkony = "xml.png", OpisKategorii = "opis xml" }
+                new Kategoria() { KategoriaId = 1, NazwaKategorii="Ogród", NazwaPlikuIkony="ogrod.png", OpisKategorii="kategoria ogród"},
+                new Kategoria() { KategoriaId = 2, NazwaKategorii = "Motoryzacja", NazwaPlikuIkony = "motoryzacja.png", OpisKategorii = "kategoria motoryzacja brum brum" },
+                new Kategoria() { KategoriaId = 3, NazwaKategorii = "Kultura", NazwaPlikuIkony = "kultura.png", OpisKategorii = "kategoria kultura" },
+                new Kategoria() { KategoriaId = 4, NazwaKategorii = "Sztuka", NazwaPlikuIkony = "sztuka.png", OpisKategorii = "kategoria sztuka" },
+                new Kategoria() { KategoriaId = 5, NazwaKategorii = "Dom", NazwaPlikuIkony = "dom.png", OpisKategorii = "kategoria dom" },
+                new Kategoria() { KategoriaId = 6, NazwaKategorii = "Hobby", NazwaPlikuIkony = "hobby.png", OpisKategorii = "kategoria hobby" }
 
              };
             kategorie.ForEach(k => context.Kategorie.AddOrUpdate(k));
@@ -29,10 +29,13 @@ namespace DOT.NET.DAL
 
             var przedmioty = new List<Przedmiot>
             {
-                new Przedmiot() {  Producent = "Pszemek", Nazwa= "wykałaczki", KategoriaId=1, Cena=5, Bestseller=true, NazwaPlikuObrazka="asp.png" },
-                new Przedmiot() { Producent = "Janusz", Nazwa= "orzeszki", KategoriaId=1, Cena=12, Bestseller=true, NazwaPlikuObrazka="asp.png" },
-                new Przedmiot() {Producent = "Kamila", Nazwa= "drukarka", KategoriaId=2, Cena=21, Bestseller=true, NazwaPlikuObrazka="asp.png" },
-                new Przedmiot() { Producent = "Karolina", Nazwa = "czekotubka", KategoriaId = 2, Cena = 30, Bestseller = true, NazwaPlikuObrazka = "asp.png" }
+                new Przedmiot() {  Producent = "Huong San", Nazwa= "Opona samochodowa", KategoriaId=2, Cena=500, Bestseller=true, NazwaPlikuObrazka="opona.png" },
+                new Przedmiot() { Producent = "Biedronka", Nazwa= "Obraz na płótnie malowany", KategoriaId=4, Cena=12000, Bestseller=true, NazwaPlikuObrazka="obraz.png" },
+                new Przedmiot() {Producent = "Hp", Nazwa= "Drukarka", KategoriaId=2, Cena=21, Bestseller=true, NazwaPlikuObrazka="drukarka.png" },
+                new Przedmiot() { Producent = "Adidas", Nazwa = "Piłka okrągła", KategoriaId = 6, Cena = 120, Bestseller = false, NazwaPlikuObrazka = "pilka.png" },
+                new Przedmiot() { Producent = "Mymusic", Nazwa = "Płyta muzyczna", KategoriaId = 3, Cena = 30, Bestseller = false, NazwaPlikuObrazka = "plyta.png" },
+                new Przedmiot() { Producent = "Biotanic", Nazwa = "taczka bez koła", KategoriaId = 1, Cena = 300, Bestseller = true, NazwaPlikuObrazka = "taczka.png" }
+
             };
             przedmioty.ForEach(k => context.Przedmioty.AddOrUpdate(k));
             context.SaveChanges();

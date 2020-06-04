@@ -1,12 +1,31 @@
-﻿@{
+﻿@model DOT.NET.ViewModels.HomeViewModel
+@using DOT.NET.OwnHelpers
+@{
     ViewBag.Title = "Strona główna";
 }
 <div class="btn-group btn-group-justified">
-    
-    <a href="#" class="btn btn-primary">Ogród</a>
-    <a href="#" class="btn btn-primary">Motoryzacja</a>
-    <a href="#" class="btn btn-primary">Kultura</a>
-    <a href="#" class="btn btn-primary">Sztuka</a>
-    <a href="#" class="btn btn-primary">Dom</a>
-    <a href="#" class="btn btn-primary">Hobby</a>
+    @foreach (var kategoria in Model.Kategorie)
+    {
+        <!-- own helper used-->
+        <img src=@Url.IkonyKategoriSciezka(kategoria.NazwaPlikuIkony)>
+        <a href="@Url.Action("Lista", "Przedmioty", new { nazwaKategori = kategoria.NazwaKategorii.ToLower() })">@kategoria.NazwaKategorii</a>
+     }
+  
 </div>
+
+
+<section>
+
+    <ul>
+        @foreach (var nowosc in Model.Nowosci)
+        {
+        <li>
+            <h1>@nowosc.Nazwa - @nowosc.Producent</h1>
+            <img src=@Url.ObrazekSciezka(nowosc.NazwaPlikuObrazka)/>
+
+        </li>
+        }
+
+    </ul>
+
+</section>

@@ -12,11 +12,11 @@
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="#">Sklep internetowy</a>
+                <a class="navbar-brand" href="@Url.Content("~/")">Sklep internetowy</a>
             </div>
             <ul class="nav navbar-nav">
-                <li><a href="link">Koszyk</a></li>
-                    </ul>
+                <li><a href="link" style="float:right;">Koszyk</a></li>
+             </ul>
         </div>
     </nav>
     <div class="container body-content">
@@ -25,11 +25,12 @@
         <footer>
 
             <div style="width:50%; margin:0 auto; padding-top: 4px;">
-                <button type="button" class="btn btn-default">O nas</button>
-                <button type="button" class="btn btn-default">Regulamin</button>
-                <button type="button" class="btn btn-default">Dostawa</button>
-                <button type="button" class="btn btn-default">Kontakt</button>
-             </div>
+                <!-- url.action helpers -->
+                <a href="@Url.Action("StronyStatyczne", "Home", new { nazwa = "Onas" }, null)" type="button" class="btn btn-default">O nas</a>
+                <a href="@Url.Action("StronyStatyczne", "Home", new { nazwa = "Regulamin" }, null)" type="button" class="btn btn-default">Regulamin</a>
+                <a href="@Url.Action("StronyStatyczne", "Home", new { nazwa = "Dostawa" }, null)" type="button" class="btn btn-default">Dostawa</a>
+                <a href="@Url.Action("StronyStatyczne", "Home", new { nazwa = "Kontakt" }, null)" type="button" class="btn btn-default">Kontakt</a>
+            </div>
             <br />
             <p>&copy; @DateTime.Now.Year DOT </p>
 

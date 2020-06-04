@@ -50,6 +50,18 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Glimpse.AspNet, Version=1.8.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Glimpse.AspNet.1.8.0\lib\net45\Glimpse.AspNet.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Glimpse.Core, Version=1.8.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Glimpse.1.8.2\lib\net45\Glimpse.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Glimpse.Mvc5, Version=1.5.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Glimpse.Mvc5.1.5.3\lib\net45\Glimpse.Mvc5.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -100,21 +112,18 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Images\logo.png" />
-    <Content Include="Content\Kategorie\aspnet.png" />
-    <Content Include="Content\Kategorie\csharp.png" />
-    <Content Include="Content\Kategorie\css.png" />
     <Content Include="Content\Kategorie\dom.png" />
     <Content Include="Content\Kategorie\hobby.png" />
-    <Content Include="Content\Kategorie\html.png" />
-    <Content Include="Content\Kategorie\javascript.png" />
-    <Content Include="Content\Kategorie\jquery.png" />
     <Content Include="Content\Kategorie\kultura.png" />
     <Content Include="Content\Kategorie\motoryzacja.png" />
     <Content Include="Content\Kategorie\ogrod.png" />
     <Content Include="Content\Kategorie\sztuka.png" />
-    <Content Include="Content\Kategorie\xml.png" />
     <Content Include="Content\Prototype.css" />
     <Content Include="Content\Przedmoty\drukarka.png" />
+    <Content Include="Content\Przedmoty\obraz.png" />
+    <Content Include="Content\Przedmoty\opona.png" />
+    <Content Include="Content\Przedmoty\plyta.png" />
+    <Content Include="Content\Przedmoty\taczka.png" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\themes\base\accordion.css" />
     <Content Include="Content\themes\base\all.css" />
@@ -170,8 +179,10 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PrzedmiotyController.cs" />
     <Compile Include="DAL\PrzedmiotyContext.cs" />
     <Compile Include="DAL\PrzedmiotyInitializer.cs" />
+    <Compile Include="GlimpseSecurityPolicy.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -191,7 +202,10 @@
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="OwnHelpers\AppConfig.cs" />
+    <Compile Include="OwnHelpers\UrlHelpers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\HomeViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
@@ -207,6 +221,7 @@
     <Content Include="Views\Home\Kontakt.cshtml" />
     <Content Include="Views\Home\Dostawa.cshtml" />
     <Content Include="Views\Home\Regulamin.cshtml" />
+    <Content Include="Views\Przedmioty\Lista.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
