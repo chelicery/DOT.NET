@@ -21,9 +21,10 @@ namespace DOT.NET.Controllers
             var przedmioty = kategoria.Przedmioty.ToList();
             return View(przedmioty);
         }
-        public ActionResult Szczegoly(string id)
+        public ActionResult Szczegoly(int id)
         {
-            return View();
+            var przedmiot = db.Przedmioty.Find(id);
+            return View(przedmiot);
         }
         [ChildActionOnly]
         public ActionResult KategorieMenu()

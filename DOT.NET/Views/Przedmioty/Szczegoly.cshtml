@@ -1,0 +1,27 @@
+﻿@model DOT.NET.Models.Przedmiot
+@using DOT.NET.OwnHelpers
+
+@{
+    ViewBag.Title = "Szczegoly";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Szczegóły Przedmiotu</h2>
+<div>
+    @Html.Action("KategorieMenu")
+</div>
+
+<div>
+    <img src=@Url.ObrazekSciezka(Model.NazwaPlikuObrazka)
+</div>
+<ul class="list-group">
+    <li class="list-group-item">@Model.Nazwa</li>
+    <li class="list-group-item">@Model.Producent</li>
+    <li class="list-group-item">@Model.Opis</li>
+    <li class="list-group-item">@string.Format("{0:0.##}", Model.Cena) zł </li>
+</ul>
+
+<a href=@Url.Action("DodajDoKoszyka", "Koszyk",new { id = Model.PrzedmiotId})>Dodaj do koszyka</a>
+
+
+

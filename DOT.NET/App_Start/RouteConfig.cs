@@ -12,7 +12,10 @@ namespace DOT.NET
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
-
+            routes.MapRoute(
+            name: "PrzedmiotySzczegoly",
+            url: "przedmiot-{id}.html",
+            defaults: new { controller = "Przedmioty", action = "Szczegoly" });
             routes.MapRoute(
             name: "PrzedmiotyLista",
             url: "Kategoria/{nazwaKategori}.html",

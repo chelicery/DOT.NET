@@ -112,6 +112,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Images\koszyk.png" />
+    <Content Include="Content\Images\logo.png" />
     <Content Include="Content\Images\lupka.png" />
     <Content Include="Content\Kategorie\dom.png" />
     <Content Include="Content\Kategorie\hobby.png" />
@@ -228,6 +229,7 @@
     <Content Include="Views\Koszyk\DodajDoKoszyka.cshtml" />
     <Content Include="Views\Przedmioty\_KategorieMenu.cshtml" />
     <Content Include="Views\Przedmioty\_PrzedmiotyList.cshtml" />
+    <Content Include="Views\Przedmioty\Szczegoly.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
