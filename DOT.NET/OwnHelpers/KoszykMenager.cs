@@ -99,7 +99,7 @@ namespace DOT.NET.OwnHelpers
         public Zamowienie UtworzZamowienie(Zamowienie noweZamowienie, string userId){
             var koszyk = PobierzKoszyk();
             noweZamowienie.DataDodania = DateTime.Now;
-            //noweZamowienie.userId = userId;
+            noweZamowienie.UserId = userId;
             db.Zamowienia.Add(noweZamowienie);
             if(noweZamowienie.PozycjeZamowienia == null)            
                 noweZamowienie.PozycjeZamowienia = new List<PozycjaZamowienia>();

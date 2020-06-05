@@ -9,6 +9,8 @@ namespace DOT.NET.Models
     public class Zamowienie
     {
         public int ZamowienieId { get; set; }
+        public string UserId { get; set; }
+        public virtual ApplicationUser User {get;set ;}
         // DOT_WALIDATORY
         [Required(ErrorMessage = "Wprowadź swoje imie")]
         [StringLength(50)]
@@ -18,7 +20,7 @@ namespace DOT.NET.Models
         public string Nazwisko { get; set; }
         [Required(ErrorMessage = "Wprowadź ulicę")]
         [StringLength(10)]
-        public string Ulica { get; set; }
+        public string Adres { get; set; }
         [Required(ErrorMessage = "Wprowadź miasto")]
         [StringLength(100)]
         public string Miasto { get; set; }

@@ -3,10 +3,13 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
 using Owin;
+using DOT.NET.App_Start;
 using DOT.NET.DAL;
 using DOT.NET.Models;
 using System;
-using static DOT.NET.App_Start.IdentityConfig; //niewiadomo czy to ok
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
 
 namespace DOT.NET
 {

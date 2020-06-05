@@ -1,4 +1,5 @@
-﻿using DOT.NET.Models;
+﻿using DOT.NET.App_Start;
+using DOT.NET.Models;
 using DOT.NET.ViewModels;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
@@ -9,7 +10,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
-using static DOT.NET.App_Start.IdentityConfig;
 
 namespace DOT.NET.Controllers
 {
