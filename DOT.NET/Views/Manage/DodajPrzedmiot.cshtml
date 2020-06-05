@@ -1,0 +1,98 @@
+﻿@model DOT.NET.ViewModels.EditPrzedmiotViewModel
+@{
+    ViewBag.Title = "DodajPrzedmiot";
+    Layout = "~/Views/Shared/_ManageLayout.cshtml";
+}
+
+<h2>Edycja przedmiotu</h2>
+<div>
+    @if(Model.Potwierdzenie.HasValue && Model.Potwierdzenie.Value)
+    {
+        <div style="text-align:center;">
+            Pomyślnie wprowadzono zmiany
+        </div>
+    }
+</div>
+<div>
+    @using (Html.BeginForm("DodajPrzedmiot", "Manage", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        @Html.AntiForgeryToken()
+
+        <div>
+            @Html.ValidationSummary();
+        </div>
+
+        <table>
+            <tr>
+                <td>@Html.LabelFor(o => o.Przedmiot.Producent, "Producent:")</td>
+                <td>@Html.TextBoxFor(o => o.Przedmiot.Producent)</td>
+                <td>@Html.ValidationMessageFor(o => o.Przedmiot.Producent)</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(o => o.Przedmiot.Nazwa, "Nazwa:")</td>
+                <td>@Html.TextBoxFor(o => o.Przedmiot.Nazwa)</td>
+                <td>@Html.ValidationMessageFor(o => o.Przedmiot.Nazwa)</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(o => o.Przedmiot.Opis, "Opis:")</td>
+                <td>@Html.TextBoxFor(o => o.Przedmiot.Opis)</td>
+                <td>@Html.ValidationMessageFor(o => o.Przedmiot.Opis)</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(o => o.Przedmiot.OpisSkrocony, "Opis skrócony:")</td>
+                <td>@Html.TextBoxFor(o => o.Przedmiot.OpisSkrocony)</td>
+                <td>@Html.ValidationMessageFor(o => o.Przedmiot.OpisSkrocony)</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(o => o.Kategorie, "Kategoria:")</td>
+                <td>@Html.DropDownListFor(m => m.Przedmiot.KategoriaId, new SelectList(Model.Kategorie, "KategoriaId", "NazwaKategorii", Model.Kategorie.First().KategoriaId))</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(o => o.Przedmiot.Cena, "Cena:")</td>
+                <td>@Html.TextBoxFor(o => o.Przedmiot.Cena)</td>
+                <td>@Html.ValidationMessageFor(o => o.Przedmiot.Cena)</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(o => o.Przedmiot.Bestseller, "Bestseller:")</td>
+                <td>@Html.CheckBoxFor(o => o.Przedmiot.Bestseller)</td>
+                <td></td>
+            </tr>
+            @if (ViewBag.EditMode == null || !ViewBag.EditMode)
+            {
+                <tr>
+                    <td colspan="3"><div style="font-size: medium; font-weight:bold;">Plik obrazka <input type="file" name="file" /></div> </td>
+                </tr>
+            }
+                <tr>
+
+                    <td style="text-align: left">
+
+                        @if (Model.Przedmiot.Ukryty)
+                        {
+                            <a href="@Url.Action("PokazPrzedmiot", "Manage", new { przedmiotId = Model.Przedmiot.PrzedmiotId })" style="display: block; margin-top: 15px; font-weight: bold;">
+                                Przywróć
+                            </a>
+                        }
+                        else
+                        {
+                            <a href="@Url.Action("UkryjPrzedmiot", "Manage", new { przedmiotId = Model.Przedmiot.PrzedmiotId })" style="display: block; margin-top: 15px; font-weight: bold;">
+                                Usuń Przedmiot
+                            </a>
+                        }
+
+                        <a href="@Url.Action("UsunPrzedmiotZBazy", "Manage", new { przedmiotId = Model.Przedmiot.PrzedmiotId })" style="display: block; margin-top: 15px; font-weight: bold; color: red;">
+                            Usuń Przedmiot
+                        </a>
+                    </td>
+
+
+                    <td style="text-align: right;">
+                        <input type="submit" value="Zapisz" class="submitLink" style="height: 40px; margin-right: 0px; margin-top: 30px; font-weight: bold;" />
+                    </td>
+                    <td></td>
+                </tr>
+            </table>
+
+}
+ 

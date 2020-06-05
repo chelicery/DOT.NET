@@ -10,10 +10,10 @@ namespace DOT.NET.Models
     {
         public int PrzedmiotId { get; set; }
         public int KategoriaId { get; set; }
-        [Required(ErrorMessage = "Wprowadz nazwę kursu")]
+        [Required(ErrorMessage = "Wprowadz nazwę przedmiotu")]
         [StringLength(100)]
         public string Nazwa { get; set; }
-        [Required(ErrorMessage = "Wprowadz nazwę autora")]
+        [Required(ErrorMessage = "Wprowadz nazwę producenta")]
         [StringLength(50)]
         public string Producent { get; set; }
         public DateTime DataDodania { get; set; }

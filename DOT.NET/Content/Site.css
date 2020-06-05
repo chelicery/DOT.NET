@@ -104,7 +104,7 @@ body {
     width: 1000px;
     margin: auto;
     font-family: 'Segoe UI';
-    background-color: black;
+    
 }
 
 a:hover, a:visited, a:link, a:active {
@@ -369,7 +369,7 @@ nav.KategorieVertical {
 #KursOpis {
     font-size: 18px;
     line-height: 22px;
-    color: #39312E;
+    color: #dark-grey;
     margin-top: 40px;
     margin-bottom: 40px;
     text-align: justify;
@@ -560,6 +560,7 @@ ul.TrzyKolumnyList {
 
 .manageHeader {
     margin-bottom: 30px;
+ 
 }
 
 #zamowienia-table {
@@ -1092,8 +1093,9 @@ div.upload input {
             font-size: 14px;
             padding-left: 40px;
             padding-right: 10px;
-            background-color: #0a5d7c;
+            background-color: #39312E;
             color: white;
+            width: 30%;
         }
 
 a.manageLink, a.manageLink:hover, a.manageLink:visited {
@@ -1110,9 +1112,8 @@ a.manageLink, a.manageLink:hover, a.manageLink:visited {
 footer {
     width: 100%;
     height: 42px;
-    background-color: #0a5d7c;
+    background-color: #1f2021;
     margin-top: 75px;
-    /*overflow: hidden;*/
 }
 
     footer nav {

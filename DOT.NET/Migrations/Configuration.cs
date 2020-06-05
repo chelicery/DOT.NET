@@ -17,10 +17,8 @@
         protected override void Seed(DOT.NET.DAL.PrzedmiotyContext context)
         {
             PrzedmiotyInitializer.SeedPrzedmiotyData(context);
-            //  This method will be called after migrating to the latest version.
+            PrzedmiotyInitializer.SeedUzytkownicy(context);
 
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method
-            //  to avoid creating duplicate seed data.
         }
     }
 }

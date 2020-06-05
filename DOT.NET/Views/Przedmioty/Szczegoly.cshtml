@@ -23,6 +23,11 @@
 
 <a href=@Url.Action("DodajDoKoszyka", "Koszyk",new { id = Model.PrzedmiotId})>Dodaj do koszyka</a>
 
+@if(User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+{
+    <a href=@Url.Action("DodajPrzedmiot", "Manage", new { przedmiotId = Model.PrzedmiotId }) style="display:block;">Edytuj</a>
+}
+
 
 
 

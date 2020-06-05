@@ -13,7 +13,7 @@ namespace DOT.NET.Models
         public string Adres { get; set; }
         public string KodPocztowy { get; set; }
         public string Miasto { get; set; }
-        [RegularExpression(@"(\+\d{2})*[\d\s-]+]", ErrorMessage = "Błędny format numeru telefonu.")]
+       
         public string Telefon { get; set; }
         [EmailAddress(ErrorMessage = "Błędny format adresu email")]
         public string Email { get; set; }
