@@ -288,10 +288,16 @@ namespace DOT.NET.Controllers
         public ActionResult UsunPrzedmiotZBazy(int przedmiotId)
         {
             var przedmiot = db.Przedmioty.First(p => p.PrzedmiotId == przedmiotId);
-            db.Przedmioty.Remove(przedmiot);
-            db.SaveChanges();
+            if (przedmiot != null)
+            {
+                db.Przedmioty.Remove(przedmiot);
+                db.SaveChanges();
+                return RedirectToAction("DodajPrzedmiot", new { potwierdzenie = true });
+            }
+            else
+                return RedirectToAction("DodajPrzedmiot", new { potwierdzenie = false });
 
-            return RedirectToAction("DodajPrzedmiot", new { potwierdzenie = true });
+
         }
 
 

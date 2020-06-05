@@ -31,12 +31,19 @@ namespace DOT.NET.DAL
 
             var przedmioty = new List<Przedmiot>
             {
-                new Przedmiot() {  Producent = "Huong San", Nazwa= "Opona samochodowa", KategoriaId=2, Cena=500, Bestseller=true, NazwaPlikuObrazka="opona.png" },
-                new Przedmiot() { Producent = "Biedronka", Nazwa= "Obraz na płótnie malowany", KategoriaId=4, Cena=12000, Bestseller=true, NazwaPlikuObrazka="obraz.png" },
+                new Przedmiot() {  Producent = "Nokian", Nazwa= "Opona samochodowa", KategoriaId=2, Cena=500, Bestseller=true, NazwaPlikuObrazka="opona.png" },
+                new Przedmiot() { Producent = "Von Gogh", Nazwa= "Obraz na płótnie malowany", KategoriaId=4, Cena=12000, Bestseller=true, NazwaPlikuObrazka="obraz.png" },
                 new Przedmiot() {Producent = "Hp", Nazwa= "Drukarka", KategoriaId=5, Cena=21, Bestseller=true, NazwaPlikuObrazka="drukarka.png" },
                 new Przedmiot() { Producent = "Adidas", Nazwa = "Piłka okrągła", KategoriaId = 6, Cena = 120, Bestseller = false, NazwaPlikuObrazka = "pilka.png" },
-                new Przedmiot() { Producent = "Mymusic", Nazwa = "Płyta muzyczna", KategoriaId = 3, Cena = 30, Bestseller = false, NazwaPlikuObrazka = "plyta.png" },
-                new Przedmiot() { Producent = "Biotanic", Nazwa = "taczka bez koła", KategoriaId = 1, Cena = 300, Bestseller = true, NazwaPlikuObrazka = "taczka.png" }
+                new Przedmiot() { Producent = "Gang Plebanii", Nazwa = "Płyta muzyczna", KategoriaId = 3, Cena = 30, Bestseller = false, NazwaPlikuObrazka = "plyta.png" },
+                new Przedmiot() { Producent = "Biotanic", Nazwa = "Taczka bez koła", KategoriaId = 1, Cena = 300, Bestseller = true, NazwaPlikuObrazka = "taczka.png" },
+
+                new Przedmiot() {  Producent = "Pirelli", Nazwa= "Opona samochodowa", KategoriaId=2, Cena=600, Bestseller=false, NazwaPlikuObrazka="opona.png" },
+                new Przedmiot() { Producent = "Jan Matejko", Nazwa= "Inny Obraz na płótnie malowany", KategoriaId=4, Cena=2000, Bestseller=false, NazwaPlikuObrazka="obraz.png" },
+                new Przedmiot() {Producent = "Oki", Nazwa= "Drukarka", KategoriaId=5, Cena=21, Bestseller=false, NazwaPlikuObrazka="drukarka.png" },
+                new Przedmiot() { Producent = "Nike", Nazwa = "Piłka okrągła", KategoriaId = 6, Cena = 150, Bestseller = true, NazwaPlikuObrazka = "pilka.png" },
+                new Przedmiot() { Producent = "Geneza", Nazwa = "Płyta muzyczna", KategoriaId = 3, Cena = 35, Bestseller = true, NazwaPlikuObrazka = "plyta.png" },
+                new Przedmiot() { Producent = "Castorama", Nazwa = "Taczka bez koła", KategoriaId = 1, Cena = 200, Bestseller = true, NazwaPlikuObrazka = "taczka.png" }
 
             };
             przedmioty.ForEach(k => context.Przedmioty.AddOrUpdate(k));
