@@ -1,0 +1,55 @@
+﻿@model DOT.NET.ViewModels.KoszykViewModel
+@using DOT.NET.OwnHelpers
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_RightSectionLayout.cshtml";
+}
+
+
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">#Id</th>
+            <th scope="col">Nazwa Przedmiotu</th>
+            <th scope="col">Producent</th>
+            <th scope="col">Ilość</th>
+            <th scope="col">Cena jednostkowa</th>
+            <th scope="col">Cena całkowita </th>
+            <th scope="col">Akcja</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var pozycjaKoszyka in Model.PozycjeKoszyka)
+        {
+            <tr>
+                <th scope="row">@pozycjaKoszyka.Przedmiot.PrzedmiotId</th>
+                <td>@pozycjaKoszyka.Przedmiot.Nazwa</td>
+                <td>@pozycjaKoszyka.Przedmiot.Producent</td>
+                <td>@pozycjaKoszyka.Ilosc</td>
+                <td>@pozycjaKoszyka.Przedmiot.Cena zł</td>
+                <td>@pozycjaKoszyka.Wartosc </td>
+                <td><a href=@Url.Action("Szczegoly", "Przedmioty", new { id = pozycjaKoszyka.Przedmiot.PrzedmiotId })>Podgląd</a></td>
+                <td><a href=@Url.Action("UsunZKoszyka", "Koszyk", new { pId = pozycjaKoszyka.Przedmiot.PrzedmiotId })>Usuń</a></td>
+            </tr>
+        }
+
+        @if (Model.PozycjeKoszyka == null || Model.PozycjeKoszyka.Count == 0)
+        {
+            <tr>
+                <td>Twój koszyk jest pusty</td>
+            </tr>
+        }
+
+
+        <tr>
+            <td>Cena Całkowita = @Model.CenaCalkowita  zł</td>
+        </tr>
+    </tbody>
+
+
+
+</table>
+
+@if (Model.CenaCalkowita > 0)
+{<button type="button" class="btn btn-primary"  ><a href="@Url.Action("Zaplac", "Koszyk")">Zapłać</a></button>}

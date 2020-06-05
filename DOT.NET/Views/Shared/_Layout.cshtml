@@ -12,14 +12,16 @@
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="@Url.Content("~/")">Sklep internetowy</a>
+                <!-- Tag helper used -->
+                <a class="navbar-brand" href="~/">Sklep internetowy</a>
             </div>
             <ul class="nav navbar-nav">
-                <li><a href="link" style="float:right;">Koszyk</a></li>
+                <li><a href="@Url.Action("Index", "Koszyk")" style="float:right;">Koszyk (@Html.Action("PobierzIloscElementowKoszyka", "Koszyk"))</a></li>
                 <!--TagHelper asp-append-version -->
-                <li><img src="~/Content/Images/logo.png" asp-append-version="true"></li>
-             </ul>
+                <li><img src="~/Content/Images/logo2.png" asp-append-version="true"></li>
+            </ul>
         </div>
+        @Html.Partial("_LoginPartial");
     </nav>
     <div class="container body-content">
         @RenderBody()
@@ -38,7 +40,7 @@
 
         </footer>
     </div>
-
+    @RenderSection("Scripts", required: false)
     <script src="~/Scripts/jquery-1.10.2.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
 </body>

@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "_RightSectionLayout";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            @Html.Action("KategorieMenu", "Przedmioty");
+        </div>
+        <div class="col-sm-8">
+            <h1> @RenderSection("SectionTitle", required: false)</h1>
+            @RenderBody();
+        </div>
+    </div>
+
+</div>
+
+@section Scripts
+{
+    @RenderSection("Scripts", required: false)
+}

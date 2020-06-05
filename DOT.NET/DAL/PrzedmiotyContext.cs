@@ -1,4 +1,5 @@
 ﻿using DOT.NET.Models;
+using Microsoft.AspNet.Identity.EntityFramework;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -8,7 +9,7 @@ using System.Web;
 
 namespace DOT.NET.DAL
 {
-    public class PrzedmiotyContext : DbContext
+    public class PrzedmiotyContext : IdentityDbContext<ApplicationUser>
     {
         public PrzedmiotyContext() : base("AllegroDatabase")
         {
@@ -23,6 +24,12 @@ namespace DOT.NET.DAL
         public DbSet<Zamowienie> Zamowienia { get; set; }
         public DbSet<PozycjaZamowienia> PozycjeZamowienia  { get; set; }
 
+
+
+        public static PrzedmiotyContext Create()
+        {
+            return new PrzedmiotyContext();
+        }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
