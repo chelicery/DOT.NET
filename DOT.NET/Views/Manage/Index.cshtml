@@ -48,6 +48,11 @@
                 <td>@Html.TextBoxFor(o => o.DaneUzytkownika.Email)</td>
                 <td>@Html.ValidationMessageFor(o => o.DaneUzytkownika.Email)</td>
             </tr>
+            <tr>
+                <td>@Html.LabelFor(o => o.DaneUzytkownika.Nip, " Nip ")</td>
+                <td>@Html.TextBoxFor(o => o.DaneUzytkownika.Nip)</td>
+                <td>@Html.ValidationMessageFor(o => o.DaneUzytkownika.Nip)</td>
+            </tr>
             <tr style="text-align: right;">
                 <td></td>
                 <td colspan="3">

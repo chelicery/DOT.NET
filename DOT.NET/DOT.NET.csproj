@@ -50,6 +50,9 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="FluentValidation, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7de548da2fbae0f0, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentValidation.8.6.2\lib\net45\FluentValidation.dll</HintPath>
+    </Reference>
     <Reference Include="Glimpse.AspNet, Version=1.8.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Glimpse.AspNet.1.8.0\lib\net45\Glimpse.AspNet.dll</HintPath>
       <Private>True</Private>
@@ -240,6 +243,10 @@
     <Compile Include="Migrations\202006051307481_zamowienia.designer.cs">
       <DependentUpon>202006051307481_zamowienia.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202006052000138_addedNip.cs" />
+    <Compile Include="Migrations\202006052000138_addedNip.designer.cs">
+      <DependentUpon>202006052000138_addedNip.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DaneUzytkownika.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -255,6 +262,7 @@
     <Compile Include="OwnHelpers\Consts.cs" />
     <Compile Include="OwnHelpers\IsessionMenager.cs" />
     <Compile Include="OwnHelpers\KoszykMenager.cs" />
+    <Compile Include="OwnHelpers\NipValidator.cs" />
     <Compile Include="OwnHelpers\SessionMenager.cs" />
     <Compile Include="OwnHelpers\UrlHelpers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -318,6 +326,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202006051307481_zamowienia.resx">
       <DependentUpon>202006051307481_zamowienia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006052000138_addedNip.resx">
+      <DependentUpon>202006052000138_addedNip.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="obj\Debug\DOT.NET.Migrations.dodaniePolaOpisSkrocony.resources" />
     <EmbeddedResource Include="obj\Debug\DOT.NET.Migrations.InitialCreate.resources" />

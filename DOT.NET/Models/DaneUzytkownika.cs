@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DOT.NET.OwnHelpers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -17,6 +18,7 @@ namespace DOT.NET.Models
         public string Telefon { get; set; }
         [EmailAddress(ErrorMessage = "Błędny format adresu email")]
         public string Email { get; set; }
-
+        [NipValidatorAttriubute]
+        public string Nip { get; set; }
     }
 }
